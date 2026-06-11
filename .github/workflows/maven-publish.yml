@@ -2,26 +2,27 @@ name: Java Hello Dosto CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["master"]
+  workflow_dispatch: # This adds the missing button
 
 jobs:
   build-and-run:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: "temurin"
 
-    - name: Compile Java file
-      run: javac testing.java
+      - name: Compile Java file
+        run: javac testing.java
 
-    - name: Run Java program
-      run: java testing
+      - name: Run Java program
+        run: java testing
