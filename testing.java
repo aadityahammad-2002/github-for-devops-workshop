@@ -3,8 +3,7 @@ public class testing {
         System.out.println("Hello Dosto, Kya Haal chall");
         int a = 10;
         int b = 20;
-        System.out.println("value of a: " + a + "value of b: " + b);
-
+        System.out.println("value of a: " + a + " value of b: " + b);
     }
 
 }
