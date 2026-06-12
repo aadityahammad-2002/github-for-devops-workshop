@@ -2,10 +2,9 @@ name: Java Hello Dosto CI
 
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
   pull_request:
-    branches: ["master"]
-  workflow_dispatch: # This adds the missing button
+    branches: ["main"]
 
 jobs:
   build-and-run:
